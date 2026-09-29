@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-challenge-layout</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .demo-container {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden; /* Evita que cualquier contenido hijo se desborde visualmente */
+        }
+
+        .demo-container h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .demo-container > p {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Estructura del Layout Resuelto con ajuste total al contenedor */
+        .layout-challenge {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: minmax(150px, 220px) 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 1rem;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+
+        .lc-header {
+            grid-area: header;
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .lc-sidebar {
+            grid-area: sidebar;
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            word-break: break-word;
+        }
+
+        .lc-main {
+            grid-area: main;
+            background-color: #ffffff;
+            border: 1px solid #dcdde1;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: #2f3640;
+            word-break: break-word;
+        }
+
+        .lc-footer {
+            grid-area: footer;
+            background-color: #7f8c8d;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        .property-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .property-list li {
+            background: #ffffff;
+            margin-bottom: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-left: 4px solid #2980b9;
+            border-radius: 4px;
+            font-family: monospace;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            color: #2c3e50;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <nav class="back">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>24-challenge-layout</h1>
+            <p>Solved structural layout challenge combining positioning, box model, and display properties.</p>
+        </header>
+
+        <section class="demo-container">
+            <h3>Solución del Reto de Maquetación</h3>
+            <p>Este desafío integra los conceptos fundamentales de estructura web para consolidar la arquitectura visual y la distribución de contenidos en CSS.</p>
+
+            <div class="layout-challenge">
+                <header class="lc-header">Header (Cabecera)</header>
+                <aside class="lc-sidebar">
+                    <p><strong>Sidebar</strong></p>
+                    <ul style="padding-left: 1rem; margin: 0.5rem 0 0;">
+                        <li>Enlace 1</li>
+                        <li>Enlace 2</li>
+                        <li>Enlace 3</li>
+                    </ul>
+                </aside>
+                <section class="lc-main">
+                    <h4 style="margin-top: 0; color: #2980b9;">Main Content (Contenido Principal)</h4>
+                    <p>Este espacio central demuestra la aplicación integrada de los modelos de caja, anchos relativos, colores y estructuración modular.</p>
+                </section>
+                <footer class="lc-footer">Footer (Pie de página) &copy; 2026</footer>
+            </div>
+
+            <ul class="property-list">
+                <li><strong>grid-template-areas:</strong> Define visualmente la distribución de las secciones en forma de cuadrícula.</li>
+                <li><strong>grid-template-columns:</strong> Establece las proporciones de las columnas (barra lateral fija y contenido flexible).</li>
+                <li><strong>gap:</strong> Sincroniza el espacio uniforme entre los diferentes bloques del layout.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
