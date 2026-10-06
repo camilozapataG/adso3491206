@@ -3,152 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>24-challenge-layout</title>
-    <link rel="stylesheet" href="../src/css/styles.css">
-    <style>
-        * {
-            box-sizing: border-box;
+    <title>24-challenge-layout></challenge-layout></title>
+    <link rel="stylesheet" href="src/css/style.css">
+<style>
+        body {
+            background-color: #17a053;
+            border: 10px solid #fff;
+            color: #333;
+            margin: 0;
         }
-
-        .demo-container {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 1.5rem;
-            margin: 1.5rem auto;
-            max-width: 850px;
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            overflow: hidden; /* Evita que cualquier contenido hijo se desborde visualmente */
+        main header div.logo {
+            background: url(/src/imgs/spriteweb.png) no-repeat -20px -400px;
+            height: 180px;
+            margin: 0px auto;
+            width: 180px;
         }
-
-        .demo-container h3 {
-            color: #2c3e50;
-            margin-top: 0;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 0.5rem;
-            text-align: center;
+        main header {
+            margin: 0 auto;
+            width: 908px;
         }
-
-        .demo-container > p {
-            text-align: center;
-            color: #2c3e50;
-        }
-
-        /* Estructura del Layout Resuelto con ajuste total al contenedor */
-        .layout-challenge {
-            display: grid;
-            grid-template-areas: 
-                "header header"
-                "sidebar main"
-                "footer footer";
-            grid-template-columns: minmax(150px, 220px) 1fr;
-            grid-template-rows: auto 1fr auto;
-            gap: 1rem;
-            width: 100%;
-            max-width: 100%;
-            margin-top: 1rem;
-        }
-
-        .lc-header {
-            grid-area: header;
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: bold;
-            width: 100%;
-        }
-
-        .lc-sidebar {
-            grid-area: sidebar;
-            background-color: #34495e;
-            color: white;
-            padding: 1rem;
-            border-radius: 6px;
-            word-break: break-word;
-        }
-
-        .lc-main {
-            grid-area: main;
-            background-color: #ffffff;
-            border: 1px solid #dcdde1;
-            padding: 1.5rem;
-            border-radius: 6px;
-            color: #2f3640;
-            word-break: break-word;
-        }
-
-        .lc-footer {
-            grid-area: footer;
-            background-color: #7f8c8d;
-            color: white;
-            padding: 0.75rem;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 0.9rem;
-            width: 100%;
-        }
-
-        .property-list {
+        main header div.menu ul {
             list-style: none;
+            margin: 0;
             padding: 0;
-            margin-top: 1.5rem;
         }
-
-        .property-list li {
-            background: #ffffff;
-            margin-bottom: 0.5rem;
-            padding: 0.75rem 1rem;
-            border-left: 4px solid #2980b9;
-            border-radius: 4px;
-            font-family: monospace;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            color: #2c3e50;
-            word-break: break-word;
+        main header div.menu ul li {
+            background-color: #00000066;
+            border-bottom: 4px solid #fff;
+            color: #fff;
+            font-family: Verdana;
+            display: inline-block;
+            margin: 4px 23px 0px 0px;
+            padding: 16px 20px;
+            text-transform: uppercase;
+            text-align: center;
+            transition: 0.5s all ease-in; 
+            width: 120px;
         }
+        main header div.menu ul li:last-child {
+            margin-right: 0px;
+        }
+         main header div.menu ul li:hover {
+            background-color: #000000bb;
+            border-bottom: 4px solid #fad000;
+            transform: translateY(-10px);
+            cursor: pointer;
+         }
+        main section.gallery {
+            background-color: #00000066;
+            margin: 40px auto;
+            width: 908px;
+        }
+        main section.gallery div {
+            background: url(/src/imgs/spriteweb.png) no-repeat -470px -6px;
+            border: 2px solid #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin: 20px 0px 20px 4px;
+            position: relative;
+            height: 200px;
+            width: 280px;
+        }
+        main section.gallery div:first-child {
+            margin-left: 20px;
+        }
+        main section.gallery div h3 {
+            background-color: #ffffff88;
+            margin: 0;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 1rem;
+            padding: 20px 10px;
+            position: absolute;
+            width: 260px;
+            transition: 0.2s all ease-in;
+            bottom: 0;
+        }
+        main section.gallery div:hover h3 {
+            background-color: #ffffffdd;
+            bottom: 141px;
+        }
+        main section.content {
+            background-color: #00000066;
+            margin: 40px auto;
+            padding: 20px;
+            width: 868px; 
+        }
+        main section.content article {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: all 0.2s ease-in
+        }
+        main section.content article:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+            color: #17a053;
+        }
+        main section.content article:last-child {
+            margin-bottom: 0;
+        }
+        main section.content article div {
+            display: inline-block;
+            vertical-align: top;
+        }
+        main section.content article div.image1,
+        main section.content article div.image2 {
+            height: 148px;
+            width: 200px;
+        }
+        main section.content article div.text {
+            font-family: Verdana;
+            text-align: justify;
+            line-height: 1.5rem;
+            width: 408px;
+        }
+        main section.content article div.image1 {
+            margin-top: 24px;
+            background: url(/src/imgs/spriteweb.png) no-repeat -240px -490px;
+            transition: all 0.8s ease-in;
+        }
+        main section.content article:hover div.image1 {
+            transform: rotateY(360deg);
+        }
+        main section.content article div.image2 {
+            background: url(/src/imgs/spriteweb.png) no-repeat 0px -216px;
+        }
+        footer {
+            background-color: #fff;
+            margin: 40px auto;
+            padding: 20px;
+            width: 868px; 
+        }
+        footer div.image-footer {
+            background: url(/src/imgs/spriteweb.png) no-repeat -510px -420px;
+            height: 200px;
+            margin: 20px auto;
+            width: 240px;
+            transition: all 0.2s ease-in;
+        }
+        footer:hover div.image-footer {
+            transform: scale(1.2);
+        }
+        footer div.menu-footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer div.menu-footer ul li {
+            border-bottom: 4px solid #fff;
+            color: #333;
+            font-family: Verdana;
+            display: inline-block;
+            margin: 4px 23px 0px 0px;
+            padding: 16px 20px;
+            text-transform: uppercase;
+            text-align: center;
+            transition: 0.5s all ease-in;
+            width: 110px;
+        }
+        footer div.menu-footer ul li:last-child {
+            margin-right: 0px;
+        }
+        footer div.menu-footer ul li:hover {
+            border-bottom: 4px solid #17a053;
+            cursor: pointer;
+            transform: translateY(-10px);
+         }
     </style>
 </head>
+
 <body>
-    <nav class="back">
-        <a href="../index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
-        </a>
-    </nav>
     <main>
-        <header class="mainmenu internal">
-            <h1>24-challenge-layout</h1>
-            <p>Solved structural layout challenge combining positioning, box model, and display properties.</p>
-        </header>
-
-        <section class="demo-container">
-            <h3>Solución del Reto de Maquetación</h3>
-            <p>Este desafío integra los conceptos fundamentales de estructura web para consolidar la arquitectura visual y la distribución de contenidos en CSS.</p>
-
-            <div class="layout-challenge">
-                <header class="lc-header">Header (Cabecera)</header>
-                <aside class="lc-sidebar">
-                    <p><strong>Sidebar</strong></p>
-                    <ul style="padding-left: 1rem; margin: 0.5rem 0 0;">
-                        <li>Enlace 1</li>
-                        <li>Enlace 2</li>
-                        <li>Enlace 3</li>
-                    </ul>
-                </aside>
-                <section class="lc-main">
-                    <h4 style="margin-top: 0; color: #2980b9;">Main Content (Contenido Principal)</h4>
-                    <p>Este espacio central demuestra la aplicación integrada de los modelos de caja, anchos relativos, colores y estructuración modular.</p>
-                </section>
-                <footer class="lc-footer">Footer (Pie de página) &copy; 2026</footer>
+        <!-- H E A D E R -->
+        <header>
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Portfolio</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
             </div>
-
-            <ul class="property-list">
-                <li><strong>grid-template-areas:</strong> Define visualmente la distribución de las secciones en forma de cuadrícula.</li>
-                <li><strong>grid-template-columns:</strong> Establece las proporciones de las columnas (barra lateral fija y contenido flexible).</li>
-                <li><strong>gap:</strong> Sincroniza el espacio uniforme entre los diferentes bloques del layout.</li>
-            </ul>
+        </header>
+        <!-- G A L L E R Y -->
+        <section class="gallery">
+            <div class="gallery01">
+                <h3>Sprite 01</h3>
+            </div>
+            <div class="gallery02">
+                <h3>Sprite 02</h3>
+            </div>
+            <div class="gallery03">
+                <h3>Sprite 03</h3>
+            </div>
         </section>
+        <section class="content">
+            <article>
+                <div class="image1"></div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed itaque nihil possimus fugiat doloribus quis ab rem error nemo? Ipsa error officia eos nulla dolores earum tempore voluptate alias illum consequatur, fuga, nobis repellat architecto maiores!
+                </div>
+                <div class="image2"></div>
+            </article>
+            <article>
+                <div class="image1"></div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed itaque nihil possimus fugiat doloribus quis ab rem error nemo? Ipsa error officia eos nulla dolores earum tempore voluptate alias illum consequatur, fuga, nobis repellat architecto maiores!
+                </div>
+                <div class="image2"></div>
+            </article>
+            <article>
+                <div class="image1"></div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed itaque nihil possimus fugiat doloribus quis ab rem error nemo? Ipsa error officia eos nulla dolores earum tempore voluptate alias illum consequatur, fuga, nobis repellat architecto maiores!
+                </div>
+                <div class="image2"></div>
+            </article>
+        </section>
+        <footer>
+            <div class="image-footer"></div>
+            <div class="menu-footer">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Portfolio</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
