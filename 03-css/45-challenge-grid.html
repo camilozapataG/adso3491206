@@ -8,53 +8,52 @@
     <style>
         .gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-sizing: border-box;
+        }
+
+        .gallery div {
+            margin: 5px;
+            background: #8aa4e8;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .a { grid-area: a; }
+        .b { grid-area: b; }
+        .c { grid-area: c; }
+        .d { grid-area: d; }
+        .e { grid-area: e; }
+        .f { grid-area: f; }
+        .g { grid-area: g; }
+
+        .gallery-1 {
+            aspect-ratio: 3 / 3;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             grid-template-areas:
                 "a b c"
                 "d b e"
                 "f f g";
-            grid-gap: 10px;
-            min-height: 80dvh;
+        }
 
-            .a { 
-                grid-area: a;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-            .b { 
-                grid-area: b;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-            .c { 
-                grid-area: c;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-            .d { 
-                grid-area: d;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-            .e { 
-                grid-area: e;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-            .f { 
-                grid-area: f; 
-                background: url(../src/imgs/goku\ blue.jfif);
-            }
-            .g { 
-                grid-area: g;
-                background: url(../src/imgs/goku\ blue.jfif);
-             }
-
-            & * {
-                background: #663399;
-                color: #d8b3fe;
-                font-family: Arial;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 12px;
-            }
+        .gallery-2 {
+            aspect-ratio: 4 / 3;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a a b c"
+                "a a d d"
+                "e f d d";
         }
     </style>
 </head>
@@ -71,15 +70,26 @@
             <h3>Irregulary Gallery: Grid Areas</h3>
         </header>
         <section>
-            <h2 class="subtitle">Example:</h2>
-            <div class="gallery">
-                <div class="a"></div>
-                <div class="b"> </div>
-                <div class="c"></div>
-                <div class="d"></div>
-                <div class="e"></div>
-                <div class="f"> </div>
-                <div class="g"></div>
+            <h3>SNK</h3>
+            <div class="gallery gallery-1">
+                <div class="a"><img src="../src/imgs/Attack Titan, JASONZ.jfif" alt=""></div>
+                <div class="b"><img src="../src/imgs/attack on titan.jfif" alt=""></div>
+                <div class="c"><img src="../src/imgs/titan de ataque.jfif" alt=""></div>
+                <div class="d"><img src="../src/imgs/Fondos De Pantalla chingones de Anime _ Attack on titan episodes, Attack on titan anime, Attack on titan.jfif" alt=""></div>
+                <div class="e"><img src="../src/imgs/shigashina.jfif" alt=""></div>
+                <div class="f"><img src="../src/imgs/marley.jfif" alt=" "></div>
+                <div class="g"><img src="../src/imgs/eren.jfif" alt=" "></div>
+            </div>
+        </section>
+        <section>
+            <h3>DBS</h3>
+            <div class="gallery gallery-2">
+                <div class="a"><img src="../src/imgs/goku blue.jfif" alt=""></div>
+                <div class="b"><img src="../src/imgs/goku ultra.jfif" alt=""></div>
+                <div class="c"><img src="../src/imgs/vegetto.jfif" alt=""></div>
+                <div class="d"><img src="../src/imgs/goku blue.jfif" alt=""></div>
+                <div class="e"><img src="../src/imgs/trunks.jfif" alt=""></div>
+                <div class="f"><img src="../src/imgs/gohan.jfif" alt=""></div>
             </div>
         </section>
     </main>
